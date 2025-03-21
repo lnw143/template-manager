@@ -3,9 +3,9 @@
 ## Usage
 
 ```shell
-python package.py
+python package.py <template-directory>
 ```
 
 ## Code Format
 
-See the examples for [ModInterger](template/modint.cpp) and [Fenwick Tree](template/fenwick.cpp).
+See the examples for [ModInterger](example/modint.cpp) and [Fenwick Tree](example/fenwick.cpp).
