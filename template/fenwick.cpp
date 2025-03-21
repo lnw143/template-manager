@@ -16,15 +16,15 @@ struct Fenwick {
 		for(int i=x; i; i&=i-1) r-=t[i];
 		return r;
 	}
-	void add(int l,int r,T k) { add(l,k),add(r+1,-k); }
-	void add(int x,T k) { add(x,k),add(x+1,-k); }
+	void add(int l,int r,T k) { _add(l,k),_add(r+1,-k); }
+	void add(int x,T k) { _add(x,k),_add(x+1,-k); }
 	T sum(int l,int r) { return _sum(r)-_sum(l-1); }
 	T sum(int x) { return _sum(x)-_sum(x-1); }
 	void clean(int n) {
 		memset(s+1,0,sizeof(T)*n);
 		memset(t+1,0,sizeof(T)*n);
 	}
-	Fenwick(): {
+	Fenwick() {
 		memset(s,0,sizeof(s));
 		memset(t,0,sizeof(t));
 	}
